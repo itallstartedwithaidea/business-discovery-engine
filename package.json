@@ -1,16 +1,18 @@
 {
   "name": "business-discovery-engine",
-  "version": "4.0.0",
-  "description": "Apollo-level business intelligence from 100% public data. Multi-state small business discovery with email pattern inference, MX verification, WHOIS lookup, and live Google Sheets integration.",
+  "version": "5.0.0",
+  "description": "Apollo-level business intelligence from 100% public data. 4 discovery sources, social media extraction, business age scoring, live dashboard.",
   "main": "engine.js",
   "type": "module",
   "scripts": {
     "start": "node engine.js start --state AZ",
-    "start:az": "node engine.js start --state AZ",
-    "start:id": "node engine.js start --state ID",
-    "start:oh": "node engine.js start --state OH",
-    "start:wa": "node engine.js start --state WA",
-    "test": "node engine.js start --state AZ --max 10 --categories plumber",
+    "start:az": "node engine.js start --state AZ --fresh",
+    "start:nv": "node engine.js start --state NV --fresh",
+    "start:oh": "node engine.js start --state OH --fresh",
+    "start:id": "node engine.js start --state ID --fresh",
+    "start:wa": "node engine.js start --state WA --fresh",
+    "all": "node engine.js start --state AZ --fresh && node engine.js start --state NV --fresh && node engine.js start --state OH --fresh && node engine.js start --state ID --fresh && node engine.js start --state WA --fresh",
+    "test": "node engine.js start --state AZ --max 10 --categories plumber --no-sheets",
     "pause": "node engine.js pause",
     "resume": "node engine.js resume",
     "stop": "node engine.js stop",
@@ -22,27 +24,15 @@
     "axios": "^1.7.0",
     "cheerio": "^1.0.0",
     "dotenv": "^16.4.0",
-    "googleapis": "^140.0.0"
+    "googleapis": "^140.0.0",
+    "puppeteer": "^24.0.0",
+    "puppeteer-extra": "^3.3.0",
+    "puppeteer-extra-plugin-stealth": "^2.11.0"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "optionalDependencies": {
+    "https-proxy-agent": "^7.0.0"
   },
-  "keywords": [
-    "business-discovery",
-    "lead-generation",
-    "email-finder",
-    "contact-enrichment",
-    "web-scraping",
-    "google-sheets",
-    "whois",
-    "email-verification",
-    "small-business",
-    "sales-intelligence"
-  ],
+  "engines": { "node": ">=18.0.0" },
   "author": "John Williams <john@itallstartedwithaidea.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/itallstartedwithaidea/business-discovery-engine.git"
-  }
+  "license": "MIT"
 }
