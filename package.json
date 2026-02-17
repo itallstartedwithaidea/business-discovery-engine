@@ -1,0 +1,48 @@
+{
+  "name": "business-discovery-engine",
+  "version": "4.0.0",
+  "description": "Apollo-level business intelligence from 100% public data. Multi-state small business discovery with email pattern inference, MX verification, WHOIS lookup, and live Google Sheets integration.",
+  "main": "engine.js",
+  "type": "module",
+  "scripts": {
+    "start": "node engine.js start --state AZ",
+    "start:az": "node engine.js start --state AZ",
+    "start:id": "node engine.js start --state ID",
+    "start:oh": "node engine.js start --state OH",
+    "start:wa": "node engine.js start --state WA",
+    "test": "node engine.js start --state AZ --max 10 --categories plumber",
+    "pause": "node engine.js pause",
+    "resume": "node engine.js resume",
+    "stop": "node engine.js stop",
+    "status": "node engine.js status",
+    "reset": "node engine.js reset",
+    "help": "node engine.js help"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "googleapis": "^140.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "business-discovery",
+    "lead-generation",
+    "email-finder",
+    "contact-enrichment",
+    "web-scraping",
+    "google-sheets",
+    "whois",
+    "email-verification",
+    "small-business",
+    "sales-intelligence"
+  ],
+  "author": "John Williams <john@itallstartedwithaidea.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itallstartedwithaidea/business-discovery-engine.git"
+  }
+}

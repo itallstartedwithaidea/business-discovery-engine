@@ -1,0 +1,9 @@
+node_modules/
+.env
+google-credentials.json
+*.csv
+.discovery-state.json
+.discovery-pause
+.discovery-stop
+*.log
+.DS_Store
