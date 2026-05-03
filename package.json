@@ -24,10 +24,10 @@
   "author": "John Williams <john@itallstartedwithaidea.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^1.7.0",
+    "axios": "^1.15.0",
     "cheerio": "^1.0.0",
     "dotenv": "^16.4.0",
-    "googleapis": "^144.0.0",
+    "googleapis": "^171.4.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
